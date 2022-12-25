@@ -11,4 +11,7 @@ public interface IService<E> {
 	E save(E e);
 	
 	void delete (long id);
+	
+	List<E> findByTitleContaining(String name);
+
 }

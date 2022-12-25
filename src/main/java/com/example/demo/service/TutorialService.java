@@ -11,6 +11,12 @@ import com.example.demo.repository.TutorialRepo;
 public class TutorialService implements IService	
 <Tutorial> {
 	
+	@Override
+	public List<Tutorial> findByTitleContaining(String name) {
+		// TODO Auto-generated method stub
+		return tutorialRepo.findByTitleContaining("%"+name+"%");
+	}
+
 	@Autowired
 	TutorialRepo tutorialRepo;
 
